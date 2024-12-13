@@ -1,0 +1,50 @@
+Créer un utilisateur (POST /api/users) :
+{
+  "id": 1,
+  "email": "user@example.com",
+  "name": "John Doe",
+  "phoneNumber": "0123456789"
+}
+
+Obtenir un utilisateur (GET /api/users/{id})
+{
+  "id": 1,
+  "email": "user@example.com",
+  "name": "John Doe",
+  "phoneNumber": "0123456789"
+}
+
+Mettre à jour un utilisateur (PUT /api/users/{id})
+{
+  "id": 1,
+  "email": "user@example.com",
+  "name": "John Smith",
+  "phoneNumber": "9876543210"
+}
+
+Créer une réservation (POST /api/reservations)
+{
+  "id": 1,
+  "date": "2024-12-15 18:00:00",
+  "timeSlot": "18:00-20:00",
+  "eventName": "Test Event",
+  "user": 1
+}
+
+Obtenir une réservation (GET /api/reservations/{id})
+{
+  "id": 1,
+  "date": "2024-12-15 18:00:00",
+  "timeSlot": "18:00-20:00",
+  "eventName": "Test Event",
+  "user": 1
+}
+
+Mettre à jour une réservation (PUT /api/reservations/{id})
+{
+  "id": 1,
+  "date": "2024-12-15 20:00:00",
+  "timeSlot": "20:00-22:00",
+  "eventName": "Test Event",
+  "user": 1
+}
