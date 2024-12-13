@@ -1,3 +1,14 @@
+Routes disponibles : 
+POST	/api/users	Créer un nouvel utilisateur	ROLE_ADMIN
+GET	/api/users/{id}	Récupérer les informations d'un utilisateur	ROLE_ADMIN ou USER (si l'utilisateur est authentifié et que l'ID correspond)
+PUT	/api/users/{id}	Mettre à jour les informations d'un utilisateur	ROLE_ADMIN ou USER (si l'utilisateur est authentifié et que l'ID correspond)
+DELETE	/api/users/{id}	Supprimer un utilisateur	ROLE_ADMIN
+POST	/api/reservations	Créer une nouvelle réservation	ROLE_USER
+GET	/api/reservations/{id}	Récupérer les informations d'une réservation	ROLE_ADMIN ou USER (si l'utilisateur est l'auteur de la réservation)
+PUT	/api/reservations/{id}	Mettre à jour une réservation	ROLE_USER (si l'utilisateur est l'auteur de la réservation)
+DELETE	/api/reservations/{id}	Supprimer une réservation	ROLE_USER (si l'utilisateur est l'auteur de la réservation)
+
+Requêtes JSON :
 Créer un utilisateur (POST /api/users) :
 {
   "id": 1,
