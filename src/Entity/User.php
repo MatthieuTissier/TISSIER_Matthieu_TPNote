@@ -141,6 +141,7 @@ class User implements UserInterface
     // Méthodes requises pour l'interface UserInterface
 
     /**
+     * @see UserInterface
      * @return string
      */
     public function getUsername(): string
@@ -149,6 +150,7 @@ class User implements UserInterface
     }
 
     /**
+     * @see UserInterface
      * @return string|null
      */
     public function getSalt(): ?string
@@ -159,9 +161,13 @@ class User implements UserInterface
 
     /**
      * Efface les données sensibles, comme le mot de passe en clair
+     * @see UserInterface
      */
-    public function eraseCredentials()
+
+     public function getUserIdentifier(): string {}
+    public function eraseCredentials(): void
     {
         // Si vous stockez des données sensibles, vous pouvez les effacer ici (par exemple, le mot de passe en clair)
+        // Sinon, cette méthode peut rester vide.
     }
 }
